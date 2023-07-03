@@ -5,5 +5,4 @@ require("lazy").setup({
 	},
 	{ "ellisonleao/gruvbox.nvim", priority = 1000 },
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-	{ "tpope/vim-fugitive" },
 })
