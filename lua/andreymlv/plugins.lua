@@ -12,7 +12,7 @@ require("lazy").setup({
 		dependencies = {
 			-- LSP Support
 			{ 'neovim/nvim-lspconfig' }, -- Required
-			{     -- Optional
+			{       -- Optional
 				'williamboman/mason.nvim',
 				build = function()
 					pcall(vim.cmd, 'MasonUpdate')
@@ -25,5 +25,10 @@ require("lazy").setup({
 			{ 'hrsh7th/cmp-nvim-lsp' }, -- Required
 			{ 'L3MON4D3/LuaSnip' }, -- Required
 		}
-	}
+	},
+	{
+		'akinsho/bufferline.nvim',
+		version = "*",
+		dependencies = 'nvim-tree/nvim-web-devicons'
+	},
 })
