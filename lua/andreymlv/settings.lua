@@ -1,8 +1,10 @@
 local opt = vim.opt
 local g = vim.g
 
-g.netrw_banner = 0
-g.netrw_winsize = 20
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+opt.completeopt = { "menu", "menuone", "noselect" }
 
 opt.laststatus = 3
 opt.showmode = false
