@@ -75,7 +75,7 @@ local lspconfig = require('lspconfig')
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 lspconfig.clangd.setup{}
 lspconfig.lua_ls.setup{}
-lspconfig.nil.setup{}
+lspconfig.nil_ls.setup{}
 
 local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 require('mason-lspconfig').setup_handlers({
