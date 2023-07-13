@@ -31,4 +31,8 @@ require("lazy").setup({
 		"jose-elias-alvarez/null-ls.nvim",
 		build = ":MasonUpdate",
 	},
+	{
+		"kkoomen/vim-doge",
+		build = ":call doge#install()",
+	},
 })
