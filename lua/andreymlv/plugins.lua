@@ -35,4 +35,6 @@ require("lazy").setup({
 		"kkoomen/vim-doge",
 		build = ":call doge#install()",
 	},
+	{ "lewis6991/gitsigns.nvim" },
+	{ "nvim-lualine/lualine.nvim" },
 })
