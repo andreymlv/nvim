@@ -72,7 +72,10 @@ cmp.setup({
 
 local lspconfig = require('lspconfig')
 
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 lspconfig.clangd.setup{}
+lspconfig.lua_ls.setup{}
+lspconfig.nil.setup{}
 
 local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 require('mason-lspconfig').setup_handlers({
@@ -84,10 +87,12 @@ require('mason-lspconfig').setup_handlers({
 })
 
 local null_ls = require("null-ls")
+-- https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
 null_ls.setup({
     sources = {
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.formatting.clang_format,
+        null_ls.builtins.formatting.nixpkgs_fmt,
  --       null_ls.builtins.completion.spell,
     },
 })
