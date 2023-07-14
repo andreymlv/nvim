@@ -119,6 +119,7 @@ null_ls.setup({
 		null_ls.builtins.formatting.latexindent,
 
 		null_ls.builtins.diagnostics.qmllint,
+		null_ls.builtins.diagnostics.chktex,
 		-- null_ls.builtins.completion.spell,
 	},
 })
