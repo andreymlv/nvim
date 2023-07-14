@@ -37,4 +37,15 @@ require("lazy").setup({
 	},
 	{ "lewis6991/gitsigns.nvim" },
 	{ "nvim-lualine/lualine.nvim" },
+	{
+		"peterhoeg/vim-qml",
+		event = "BufRead",
+		ft = { "qml" },
+	},
+
+	{
+		"peterhoeg/vim-qml",
+		event = "BufRead",
+		ft = { "qml" },
+	},
 })

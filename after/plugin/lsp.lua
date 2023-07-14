@@ -4,11 +4,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		local opts = { buffer = event.buf }
 		vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
 		vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
-    vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+		vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+		vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
 		vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-    vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
-    vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, opts)
+		vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
+		vim.keymap.set("n", "<space>D", vim.lsp.buf.type_definition, opts)
 		vim.keymap.set({ "n", "v" }, "<space>la", vim.lsp.buf.code_action, opts)
 		vim.keymap.set("n", "<space>lr", vim.lsp.buf.rename, opts)
 		vim.keymap.set("n", "<space>lf", function()
@@ -90,6 +90,12 @@ lspconfig.clangd.setup({
 })
 lspconfig.lua_ls.setup({})
 lspconfig.nil_ls.setup({})
+lspconfig.texlab.setup({})
+lspconfig.marksman.setup({})
+lspconfig.qmlls.setup({
+	cmd = { "qmlls6" },
+	filetypes = { "qmljs", "qml" },
+})
 
 require("mason-lspconfig").setup_handlers({
 	function(server_name)
@@ -106,6 +112,13 @@ null_ls.setup({
 		null_ls.builtins.formatting.stylua,
 		null_ls.builtins.formatting.clang_format,
 		null_ls.builtins.formatting.nixpkgs_fmt,
+		null_ls.builtins.formatting.qmlformat,
+		null_ls.builtins.formatting.shfmt,
+		null_ls.builtins.formatting.latexindent,
+		null_ls.builtins.formatting.prettier,
+		null_ls.builtins.formatting.latexindent,
+
+		null_ls.builtins.diagnostics.qmllint,
 		-- null_ls.builtins.completion.spell,
 	},
 })
