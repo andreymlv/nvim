@@ -15,8 +15,6 @@ require("lazy").setup({
     },
   },
   {
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-buffer",
@@ -26,7 +24,6 @@ require("lazy").setup({
     "L3MON4D3/LuaSnip",
     "saadparwaiz1/cmp_luasnip",
     "jose-elias-alvarez/null-ls.nvim",
-    build = ":MasonUpdate",
   },
   {
     "kkoomen/vim-doge",

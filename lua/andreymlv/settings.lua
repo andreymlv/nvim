@@ -1,8 +1,10 @@
 local opt = vim.opt
 local g = vim.g
 
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+opt.langmap = 'ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz'
+
+g.loaded_netrw = 1
+g.loaded_netrwPlugin = 1
 
 opt.completeopt = { "menu", "menuone", "noselect" }
 

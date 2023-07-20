@@ -17,9 +17,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
   end,
 })
 
-require("mason").setup()
-require("mason-lspconfig").setup()
-
 local has_words_before = function()
   unpack = unpack or table.unpack
   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -97,14 +94,6 @@ lspconfig.qmlls.setup({
   filetypes = { "qmljs", "qml" },
 })
 lspconfig.zls.setup({})
-
-require("mason-lspconfig").setup_handlers({
-  function(server_name)
-    lspconfig[server_name].setup({
-      capabilities = lsp_capabilities,
-    })
-  end,
-})
 
 local null_ls = require("null-ls")
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
