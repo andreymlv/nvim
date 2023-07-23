@@ -42,4 +42,8 @@ require("lazy").setup({
     ft = { "qml" },
   },
   { "numToStr/Comment.nvim" },
+  {
+    "nvim-neorg/neorg",
+    run = ":Neorg sync-parsers", -- This is the important bit!
+  },
 })
