@@ -85,9 +85,22 @@ lspconfig.clangd.setup({
     "--offset-encoding=utf-16",
   },
 })
+lspconfig.pyright.setup({})
 lspconfig.lua_ls.setup({})
 lspconfig.nil_ls.setup({})
-lspconfig.texlab.setup({})
+lspconfig.texlab.setup({
+  settings = {
+    texlab = {
+      build = {
+        onSave = true,
+      },
+      chktex = {
+        onEdit = true,
+        onOpenAndSave = true,
+      },
+    },
+  },
+})
 lspconfig.marksman.setup({})
 lspconfig.qmlls.setup({
   cmd = { "qmlls6" },
@@ -101,6 +114,7 @@ null_ls.setup({
   sources = {
     null_ls.builtins.formatting.clang_format,
     null_ls.builtins.formatting.latexindent,
+    null_ls.builtins.formatting.black,
     null_ls.builtins.formatting.latexindent,
     null_ls.builtins.formatting.nixpkgs_fmt,
     null_ls.builtins.formatting.prettier,

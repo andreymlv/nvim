@@ -1,18 +1,22 @@
 require("lazy").setup({
   {
     "nvim-telescope/telescope.nvim",
-    tag = "0.1.2",
     dependencies = { "nvim-lua/plenary.nvim" },
   },
-  { "ellisonleao/gruvbox.nvim",        priority = 1000 },
+  { "ellisonleao/gruvbox.nvim" },
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
   {
-    "nvim-tree/nvim-tree.lua",
-    version = "*",
-    lazy = false,
+    "nvim-neo-tree/neo-tree.nvim",
     dependencies = {
+      "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
     },
+  },
+  {
+    "s1n7ax/nvim-window-picker",
+    name = "window-picker",
+    event = "VeryLazy",
   },
   {
     "neovim/nvim-lspconfig",
@@ -31,6 +35,7 @@ require("lazy").setup({
   },
   { "lewis6991/gitsigns.nvim" },
   { "nvim-lualine/lualine.nvim" },
+  { "akinsho/bufferline.nvim",  dependencies = "nvim-tree/nvim-web-devicons" },
   {
     "peterhoeg/vim-qml",
     event = "BufRead",

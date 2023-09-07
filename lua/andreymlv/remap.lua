@@ -1,3 +1,6 @@
-vim.keymap.set("n", "<leader>e", vim.cmd.NvimTreeToggle)
+vim.keymap.set("n", "<leader>e", "<CMD>Neotree toggle<CR>")
+vim.keymap.set("n", "<S-h>", "<CMD>BufferLineCyclePrev<CR>")
+vim.keymap.set("n", "<S-l>", "<CMD>BufferLineCycleNext<CR>")
 vim.keymap.set({ "n", "i" }, "<C-S>", vim.cmd.write)
 vim.keymap.set("n", "<leader>c", vim.cmd.bdelete)
+vim.keymap.set("n", "gx", "<CMD>!xdg-open <cfile><CR><CR>")
