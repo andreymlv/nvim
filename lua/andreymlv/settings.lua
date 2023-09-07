@@ -39,4 +39,9 @@ opt.termguicolors = true
 opt.timeoutlen = 400
 opt.undofile = true
 
+-- Download files to ~/.local/share/nvim/site/spell
+-- http://ftp.vim.org/vim/runtime/spell/
+opt.spell = true
+opt.spelllang = { "en_us", "ru" }
+
 g.mapleader = " "
